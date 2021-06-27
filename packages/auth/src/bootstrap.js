@@ -14,7 +14,7 @@ const mount = (el, { onLogin, onNavigate, defaultHistory, initialPath }) => {
   const history = defaultHistory || createMemoryHistory();
 
   const routes = [
-    { path: '/auth/signup', component: Signup },
+    { path: '/auth/signup', component: Signup, props: { onLogin } },
     { path: '/auth/signin', component: Signin, props: { onLogin } }
   ]
 

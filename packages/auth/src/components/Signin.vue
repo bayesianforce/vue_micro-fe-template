@@ -6,7 +6,7 @@
 					<img
 						alt="logo form"
 						width="100"
-						src="https://s-media-cache-ak0.pinimg.com/564x/37/0e/f3/370ef35071dbc2e305014ad17560dcb3.jpg"
+						src="https://toppng.com/uploads/preview/assassins-creed-logo-assassins-creed-unity-symbol-11562928846pfso5lm8o0.png"
 					/>
 					<h3>Sign In</h3>
 				</div>
@@ -55,9 +55,9 @@
 <script>
 import Card from "primevue/card";
 import Button from "primevue/button";
-import Password from "primevue/password";
-import InputText from "primevue/inputtext";
 import Checkbox from "primevue/checkbox";
+import InputText from "primevue/inputtext";
+import Password from "primevue/password";
 
 export default {
 	components: {

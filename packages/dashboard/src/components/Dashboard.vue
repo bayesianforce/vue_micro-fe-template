@@ -241,8 +241,8 @@ export default {
   components: {
     ProgressBar,
     Checkbox,
-    Panel,
     Dropdown,
+    Panel,
     InputText,
     Button,
     Column,

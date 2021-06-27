@@ -13,12 +13,11 @@
 import Header from "./components/Header.vue";
 
 import "primevue/resources/themes/bootstrap4-light-blue/theme.css";
-import "primevue/resources/primevue.css";
-import "primeflex/primeflex.css";
 import "primeicons/primeicons.css";
+import "primeflex/primeflex.css";
+import "primevue/resources/primevue.css";
 
 export default {
-	name: "App",
 	components: {
 		Header,
 	},
@@ -55,7 +54,7 @@ export default {
 <style lang="scss" scoped>
 	.fade-enter-active,
 	.fade-leave-active {
-		transition: opacity 0.3s ease;
+		transition: opacity 0.25s ease;
 	}
 
 	.fade-enter-from,

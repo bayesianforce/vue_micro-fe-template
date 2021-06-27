@@ -6,7 +6,7 @@
 					<img
 						alt="logo form"
 						width="100"
-						src="https://s-media-cache-ak0.pinimg.com/564x/37/0e/f3/370ef35071dbc2e305014ad17560dcb3.jpg"
+						src="https://toppng.com/uploads/preview/assassins-creed-logo-assassins-creed-unity-symbol-11562928846pfso5lm8o0.png"
 					/>
 					<h3>Sign Up</h3>
 				</div>
@@ -31,7 +31,12 @@
 					</span>
 
 					<span class="p-float-label p-mb-4">
-						<InputText autocomplete id="password" type="password" class="p-mb-2" />
+						<InputText
+							autocomplete
+							id="password"
+							type="password"
+							class="p-mb-2"
+						/>
 						<label for="password">password</label>
 					</span>
 				</form>
@@ -44,9 +49,12 @@
 
 			<template #footer>
 				<div class="p-fluid">
-					<router-link to="/auth/signin">
-						<Button label="SIGN UP" iconPos="right" class="p-button-rounded" />
-					</router-link>
+					<Button
+						label="SIGN UP"
+						iconPos="right"
+						class="p-button-rounded"
+						@click="onLogin"
+					/>
 					<router-link to="/auth/signin">
 						<Button
 							label="Already have an account? Sign in"
@@ -75,6 +83,11 @@ export default {
 		InputText,
 		Password,
 		Checkbox,
+	},
+	props: {
+		onLogin: {
+			type: Function
+		}
 	},
 };
 </script>
