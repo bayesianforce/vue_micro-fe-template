@@ -12,5 +12,5 @@ export interface GameItem {
 export interface Score {
   gameItems: GameItem[];
   bonus: number;
-  score: number;
+  total: number;
 }

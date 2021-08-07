@@ -1,11 +1,11 @@
 import { ItemsWithBonusesActivated } from '../enums';
-import { Item, GameItem, Bonuses, Score } from '../types';
+import { Item, GameItem, BonusesPerItems, Score } from '../types';
 
 export class Game {
   gameItems: Record<string, GameItem>;
-  bonuses: Bonuses;
+  bonuses: BonusesPerItems;
 
-  constructor(bonuses: Bonuses, items: Item[]) {
+  constructor(bonuses: BonusesPerItems, items: Item[]) {
     this.gameItems = normalizeItems(items);
     this.bonuses = bonuses;
   }
@@ -45,12 +45,12 @@ export class Game {
       (acc, { score, quantity, unitPoints }) => acc + (score - quantity * unitPoints),
       0,
     );
-    const score = gameItems.reduce((acc, { score }) => acc + score, 0);
+    const total = gameItems.reduce((acc, { score }) => acc + score, 0);
 
     return {
       gameItems,
       bonus,
-      score,
+      total,
     };
   }
 
