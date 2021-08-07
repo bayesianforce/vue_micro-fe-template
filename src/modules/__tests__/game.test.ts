@@ -1,13 +1,12 @@
-import bonuses from '../bonuses';
+import { bonuses } from '../bonuses';
 import { Game } from '../game';
+import { mapBonusesWithItems } from '../../utils/mapBonusesWithItems';
 
-import items from '../../mock/data.json';
+import items from '../../mock/items.json';
+import itemsBonusesRoles from '../../mock/itemsBonusesRoles.json';
 
 describe('Game test suite', () => {
-  const game = new Game(
-    bonuses({ twoHundredPerThreeQueue: ['A'], ninetyPerTwoQueue: ['B'] }),
-    items,
-  );
+  const game = new Game(mapBonusesWithItems(itemsBonusesRoles, bonuses), items);
 
   afterEach(() => {
     game.reset();
@@ -15,6 +14,7 @@ describe('Game test suite', () => {
 
   it('should add one element A to the game score', () => {
     game.add('A');
+
     expect(game.gameItems['A'].quantity).toBe(1);
     expect(game.gameItems['A'].score).toBe(50);
   });
@@ -38,7 +38,7 @@ describe('Game test suite', () => {
 
     const result = game.getCurrentScore();
 
-    expect(result.score).toBe(370);
+    expect(result.total).toBe(370);
     expect(result.bonus).toBe(80);
     expect(result.gameItems[0].score).toBe(250);
     expect(result.gameItems[1].score).toBe(120);

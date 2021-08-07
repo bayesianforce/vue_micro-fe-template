@@ -1,12 +1,14 @@
 import { GameItem } from './game.interfaces';
 
-export interface Bonuses {
+export interface BonusesPerItems {
   [key: string]: {
     methods: Array<(params: GameItem) => number>;
   };
 }
 
-export interface BonusesQueues {
-  twoHundredPerThreeQueue: string[];
-  ninetyPerTwoQueue: string[];
+export interface ItemsRoles {
+  items: string[];
+  bonusName: string;
 }
+
+export type Bonuses = Record<string, (gameItem: GameItem) => number>;

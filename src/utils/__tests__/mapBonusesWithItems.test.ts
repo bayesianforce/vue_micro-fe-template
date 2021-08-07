@@ -1,5 +1,5 @@
-import { bonuses } from '../bonuses';
-import { mapBonusesWithItems } from '../../utils/mapBonusesWithItems';
+import { bonuses } from '../../modules/bonuses';
+import { mapBonusesWithItems } from '../mapBonusesWithItems';
 
 import itemsBonusesRoles from '../../mock/itemsBonusesRoles.json';
 
