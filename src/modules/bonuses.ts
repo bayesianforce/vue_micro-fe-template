@@ -3,11 +3,11 @@ import { GameItem, Bonuses, BonusesQueues } from '../types';
 /**
  * List of bonuses
  */
-function twoHundredPerThree({ quantity }: GameItem): number {
+export function twoHundredPerThree({ quantity }: GameItem): number {
   return quantity === 3 ? 200 : 0;
 }
 
-function ninetyPerTwo({ quantity }: GameItem): number {
+export function ninetyPerTwo({ quantity }: GameItem): number {
   return quantity == 2 ? 90 : 0;
 }
 
