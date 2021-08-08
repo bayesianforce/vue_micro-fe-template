@@ -9,8 +9,11 @@ export interface GameItem {
   score: number;
 }
 
+interface ScoreItem extends GameItem {
+  name: string;
+}
 export interface Score {
-  gameItems: GameItem[];
+  gameItems: ScoreItem[];
   bonus: number;
   total: number;
 }
