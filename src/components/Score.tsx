@@ -14,7 +14,7 @@ const DetailsScoreStyle = styled.section`
   flex: auto;
 `;
 
-const ItemsScoreStyle = styled.table`
+export const ItemsScoreStyle = styled.table`
   text-align: center;
   width: 100%;
   height: 100%;
@@ -47,12 +47,12 @@ const ItemCell = styled.div`
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 `;
 
-const TotalBonusStyle = styled.section`
+export const TotalBonusStyle = styled.section`
   padding: 0 15px;
   border-top: 1px solid grey;
 `;
 
-const TotalScoreStyle = styled.section`
+export const TotalScoreStyle = styled.section`
   padding: 0 15px;
   display: flex;
   text-align: center;
@@ -61,7 +61,7 @@ const TotalScoreStyle = styled.section`
   border-top: 1px solid grey;
 `;
 
-const ResetButtonStyle = styled.button`
+export const ResetButtonStyle = styled.button`
   border: none;
   padding: 15px 32px;
   text-align: center;
