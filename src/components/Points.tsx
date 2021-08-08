@@ -10,7 +10,7 @@ const PointsHeaderStyle = styled.section`
   background-color: rgb(134, 76, 191);
 `;
 
-const ItemsContainerStyle = styled.article`
+export const ItemsContainerStyle = styled.article`
   overflow: auto;
   display: flex;
   justify-content: space-between;
