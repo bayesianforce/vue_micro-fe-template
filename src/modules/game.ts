@@ -27,20 +27,23 @@ export class Game {
    */
   add(itemName: string): void {
     const item = this.gameItems[itemName];
-    item.quantity += 1;
 
-    const bonus = this._getBonusesPerItem(
-      itemName as ItemsWithBonusesActivated,
-      this.gameItems[itemName],
-    );
-    item.score = bonus || item.score + item.unitPoints;
+    if (item) {
+      item.quantity += 1;
+
+      const bonus = this._getBonusesPerItem(
+        itemName as ItemsWithBonusesActivated,
+        this.gameItems[itemName],
+      );
+      item.score = bonus || item.score + item.unitPoints;
+    }
   }
 
   /**
    *  Retrieves detailed info about bonus, score and game items scores
    */
   getCurrentScore(): Score {
-    const gameItems = Object.values(this.gameItems);
+    const gameItems = Object.entries(this.gameItems).map(([name, values]) => ({ name, ...values }));
     const bonus = gameItems.reduce(
       (acc, { score, quantity, unitPoints }) => acc + (score - quantity * unitPoints),
       0,
